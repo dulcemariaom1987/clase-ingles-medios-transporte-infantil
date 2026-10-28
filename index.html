@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>¡Aprendo inglés! Los medios de transporte</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light;--ink:#2b2d5b;--card:#ffffff;--pink:#ff5fa2;--yel:#ffd23f;--grn:#2ec4b6;--blu:#4d96ff;--org:#ff9f1c}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;min-height:100vh;font-family:'Baloo 2','Comic Sans MS',system-ui,sans-serif;color:var(--ink);background:linear-gradient(160deg,#7bdff2,#b2f7ef 35%,#fff1a8 70%,#ffc6e0);background-attachment:fixed;overflow-x:hidden}
+.bg span{position:fixed;font-size:44px;opacity:.35;animation:float 14s linear infinite;pointer-events:none;z-index:0}
+@keyframes float{0%{transform:translateX(-80px) translateY(0)}50%{transform:translateX(50vw) translateY(-25px)}100%{transform:translateX(110vw) translateY(0)}}
+header{position:relative;z-index:1;text-align:center;padding:14px 12px 4px}
+h1{margin:0;font-size:clamp(26px,6vw,46px);font-weight:800;color:#fff;text-shadow:3px 3px 0 var(--pink),6px 6px 0 rgba(43,45,91,.25);animation:bounce 2s ease-in-out infinite}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.stars{display:inline-block;margin-top:8px;background:var(--yel);padding:4px 16px;border-radius:30px;font-weight:800;font-size:20px;box-shadow:0 4px 0 #e0a800}
+nav{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;padding:10px}
+nav button{font:inherit;font-weight:700;font-size:16px;border:0;border-radius:18px;padding:8px 14px;color:#fff;cursor:pointer;box-shadow:0 5px 0 rgba(0,0,0,.2);transition:transform .15s}
+nav button:nth-child(1){background:var(--blu)}nav button:nth-child(2){background:var(--pink)}nav button:nth-child(3){background:var(--grn)}nav button:nth-child(4){background:var(--org)}nav button:nth-child(5){background:#9b5de5}nav button:nth-child(6){background:#f15bb5}
+nav button:hover{transform:translateY(-3px)}
+nav button.on{outline:4px solid #fff;transform:scale(1.08)}
+main{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:6px 12px 40px}
+.card{background:var(--card);color:var(--ink);border-radius:28px;padding:18px;box-shadow:0 8px 0 rgba(43,45,91,.15);text-align:center;animation:pop .4s ease}
+@keyframes pop{from{transform:scale(.9);opacity:0}to{transform:scale(1);opacity:1}}
+.card h2{margin:0 0 6px;font-size:28px}
+.how{background:#fff7d6;border-radius:16px;padding:8px 12px;margin:8px 0 14px;font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px}
+.w{border:0;font:inherit;color:var(--ink);background:#eef6ff;border-radius:22px;padding:10px 4px;cursor:pointer;box-shadow:0 5px 0 #b9d4ff;transition:transform .15s}
+.w:nth-child(3n){background:#fff0f6;box-shadow:0 5px 0 #ffc2dc}.w:nth-child(3n+1){background:#eafff9;box-shadow:0 5px 0 #a9ecdf}
+.w:hover{transform:translateY(-4px) rotate(-2deg)}.w.jump{animation:jump .5s}
+@keyframes jump{30%{transform:translateY(-18px) scale(1.1)}60%{transform:translateY(0) scale(.95)}}
+.w b{display:block;font-size:22px}.w i{font-style:normal;font-size:15px;opacity:.8}.em{font-size:56px;line-height:1.1;display:block}
+.big{font-size:90px;line-height:1.1;animation:bounce 1.8s infinite}
+.btn{font:inherit;font-weight:800;font-size:20px;border:0;border-radius:20px;padding:10px 22px;margin:6px;color:#fff;background:var(--pink);cursor:pointer;box-shadow:0 5px 0 #c93d79}
+.btn:active{transform:translateY(3px);box-shadow:0 2px 0 #c93d79}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.opt{font:inherit;font-weight:800;font-size:24px;color:var(--ink);border:0;border-radius:20px;padding:14px 6px;cursor:pointer;background:#e8f0ff;box-shadow:0 5px 0 #b3c7f5;transition:transform .15s}
+.opt:hover{transform:scale(1.04)}.opt .em{font-size:52px}
+.opt.ok{background:#b9f6ca;box-shadow:0 5px 0 #5fcf87;animation:jump .5s}
+.opt.no{background:#ffd6d6;box-shadow:0 5px 0 #f09a9a;animation:shake .4s;pointer-events:none;opacity:.7}
+@keyframes shake{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+.msg{min-height:30px;margin-top:10px;font-weight:800;font-size:20px}
+.prog{font-weight:700;opacity:.7}
+.pbox{height:230px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end}
+.pop{width:84px;border-radius:42px 42px 14px 14px;background:linear-gradient(180deg,#ff5fa2,#ffd23f);transition:height .6s ease;box-shadow:inset -10px 0 0 rgba(255,255,255,.3)}
+.stick{width:18px;height:46px;background:#e5b07a;border-radius:0 0 8px 8px;margin-top:-2px}
+.puddle{height:12px;background:#ff8fc0;border-radius:50%;transition:width .6s ease;margin-top:-4px}
+.pbox .pop{order:0}.pbox .stick{order:1}.pbox .puddle{order:2}.pbox{position:relative}.pw{display:flex;flex-direction:column;align-items:center;transform-origin:50% 100%;animation:sway 2.4s ease-in-out infinite}.pw.dance{animation:dance .6s ease-in-out infinite}.pbox .pop{position:relative;overflow:hidden}.face{position:absolute;left:0;right:0;top:8px;font-size:30px}.drip{position:absolute;bottom:46px;width:10px;height:14px;background:#ff8fc0;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;opacity:0;animation:dr 1.4s ease-in infinite}@keyframes sway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}@keyframes dance{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-16px) rotate(8deg)}}@keyframes dr{0%{transform:translateY(0);opacity:1}100%{transform:translateY(40px);opacity:0}}
+.lives{font-size:22px}
+.blanks{font-size:38px;font-weight:800;letter-spacing:8px;margin:8px 0}
+.kb{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.kb button{font:inherit;font-weight:800;font-size:20px;width:42px;height:44px;border:0;border-radius:12px;background:#e8f0ff;color:var(--ink);cursor:pointer;box-shadow:0 3px 0 #b3c7f5}
+.kb button.g{background:#b9f6ca;box-shadow:0 3px 0 #5fcf87}.kb button.b{background:#ffd6d6;box-shadow:0 3px 0 #f09a9a}.kb button:disabled{cursor:default}
+.mem{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:420px;margin:0 auto}
+.mc{aspect-ratio:1;border:0;border-radius:18px;font:inherit;font-weight:800;font-size:20px;color:#fff;cursor:pointer;background:linear-gradient(135deg,#9b5de5,#f15bb5);box-shadow:0 5px 0 rgba(0,0,0,.2);transition:transform .3s}
+.mc.up{background:#fff;color:var(--ink);transform:rotateY(360deg);box-shadow:0 5px 0 #b3c7f5}.mc.done{background:#b9f6ca;color:var(--ink);box-shadow:0 5px 0 #5fcf87}
+.mc .em{font-size:38px}
+.cf{position:fixed;top:-20px;width:12px;height:16px;z-index:50;pointer-events:none;animation:fall 2s ease-in forwards}
+@keyframes fall{to{transform:translateY(105vh) rotate(720deg)}}
+@media(max-width:420px){.opt{font-size:20px}.kb button{width:36px;height:40px}}
+</style>
+</head>
+<body>
+<div class="bg"><span style="top:12%;animation-delay:0s">☁️</span><span style="top:30%;animation-delay:-5s">🚁</span><span style="top:55%;animation-delay:-9s">✈️</span><span style="top:78%;animation-delay:-3s">🚀</span></div>
+<header>
+  <h1>🚦 ¡Aprendo inglés! 🚦</h1>
+  <div style="font-weight:800;font-size:20px;color:var(--ink)">Los medios de transporte</div>
+  <div class="stars">⭐ <span id="stars">0</span></div>
+</header>
+<nav id="nav"></nav>
+<main id="app"></main>
+
+<script>
+(function(){
+var W=[
+{e:'🚗',w:'car',es:'carro'},{e:'🚌',w:'bus',es:'autobús'},{e:'🚆',w:'train',es:'tren'},{e:'✈️',w:'plane',es:'avión'},
+{e:'🚢',w:'boat',es:'barco'},{e:'🚲',w:'bike',es:'bicicleta'},{e:'🚚',w:'truck',es:'camión'},{e:'🚁',w:'helicopter',es:'helicóptero'},
+{e:'🏍️',w:'motorcycle',es:'moto'},{e:'🚕',w:'taxi',es:'taxi'},{e:'🚑',w:'ambulance',es:'ambulancia'},{e:'🚒',w:'fire truck',es:'camión de bomberos'}
+];
+var app=document.getElementById('app'),stars=0;
+function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+function addStar(n){stars+=n;document.getElementById('stars').textContent=stars;}
+function say(t){try{var s=window.speechSynthesis;if(!s)return;s.cancel();var u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=0.8;u.pitch=1.1;var v=s.getVoices().filter(function(x){return x.lang==='en-US'||x.lang==='en_US';})[0];if(v)u.voice=v;s.speak(u);}catch(e){}}
+var AC=null;
+function tone(f,t,d,type,v,slide){try{if(!AC){AC=new (window.AudioContext||window.webkitAudioContext)();}if(AC.state==='suspended')AC.resume();var o=AC.createOscillator(),g=AC.createGain(),s=AC.currentTime+t;o.type=type||'sine';o.frequency.setValueAtTime(f,s);if(slide)o.frequency.exponentialRampToValueAtTime(slide,s+d);g.gain.setValueAtTime(v||0.15,s);g.gain.exponentialRampToValueAtTime(0.001,s+d);o.connect(g);g.connect(AC.destination);o.start(s);o.stop(s+d+0.02);}catch(e){}}
+var sfx={
+click:function(){tone(660,0,.08,'triangle',.12);},
+pop:function(){tone(450,0,.12,'sine',.15,900);},
+ok:function(){tone(523,0,.12,'triangle');tone(659,.1,.12,'triangle');tone(784,.2,.25,'triangle');},
+no:function(){tone(250,0,.3,'sawtooth',.07,120);},
+win:function(){[523,659,784,1047,784,1047].forEach(function(f,i){tone(f,i*.12,.2,'square',.06);});},
+lose:function(){tone(420,0,.9,'sawtooth',.07,70);},
+flip:function(){tone(900,0,.07,'sine',.1,500);},
+good:function(){tone(880,0,.1,'triangle',.12);tone(1175,.09,.14,'triangle',.12);},
+drip:function(){tone(1200,0,.18,'sine',.15,300);tone(1000,.2,.15,'sine',.1,250);}
+};
+function confetti(n){var c=['#ff5fa2','#ffd23f','#2ec4b6','#4d96ff','#ff9f1c','#9b5de5'];for(var i=0;i<(n||30);i++){var d=document.createElement('div');d.className='cf';d.style.left=Math.random()*100+'vw';d.style.background=pick(c);d.style.animationDelay=Math.random()*0.5+'s';document.body.appendChild(d);setTimeout(function(x){return function(){x.remove();};}(d),2800);}}
+function others(item,n){return shuffle(W.filter(function(x){return x!==item;})).slice(0,n);}
+
+/* ---------- APRENDE ---------- */
+function learn(){
+  var h='<div class="card"><h2>📚 ¡Aprende las palabras!</h2><div class="how">👆 Toca cada tarjeta para <b>escuchar</b> cómo se dice en inglés. ¡Repite en voz alta!</div><div class="grid">';
+  W.forEach(function(x,i){h+='<button class="w" data-i="'+i+'"><span class="em">'+x.e+'</span><b>'+x.w+'</b><i>'+x.es+'</i></button>';});
+  app.innerHTML=h+'</div></div>';
+  [].forEach.call(app.querySelectorAll('.w'),function(b){b.onclick=function(){sfx.pop();say(W[b.dataset.i].w);b.classList.remove('jump');void b.offsetWidth;b.classList.add('jump');};});
+}
+
+/* ---------- PALETA QUE SE DERRITE ---------- */
+function melt(){
+  var ws=W.filter(function(x){return x.w.indexOf(' ')<0;}),cur,g,bad,pb=0;
+  function start(same){if(!same)cur=pick(ws);g={};bad=0;pb=0;draw();}
+  function draw(){
+    var word=cur.w,won=word.split('').every(function(c){return g[c];}),lost=bad>=6;
+    var blanks=word.split('').map(function(c){return g[c]?c.toUpperCase():'_';}).join(' ');
+    var h='<div class="card"><h2>🍧 La paleta que se derrite</h2><div class="how">Adivina la palabra en inglés letra por letra. ¡Cada error derrite la paleta! Tienes 6 vidas.</div>';
+    h+='<div style="font-size:70px">'+cur.e+'</div><div>Pista: es un medio de transporte</div>';
+    h+='<div class="pbox">'+(bad>0&&!lost?'<i class="drip" style="left:calc(50% - 30px)"></i><i class="drip" style="left:calc(50% + 4px);animation-delay:.5s"></i><i class="drip" style="left:calc(50% + 26px);animation-delay:.9s"></i>':'')+'<div class="pw'+(won?' dance':'')+'"><div class="pop" id="pp" style="height:'+(150-pb*22)+'px"><span class="face">'+['😄','😄','🙂','😟','😰','😭','😵'][bad]+'</span></div><div class="stick"></div></div><div class="puddle" id="pd" style="width:'+(20+pb*28)+'px"></div></div>';
+    h+='<div class="lives">'+'❤️'.repeat(6-bad)+'🖤'.repeat(bad)+'</div><div class="blanks">'+blanks+'</div>';
+    if(won){h+='<div class="msg">🎉 ¡Muy bien! ¡Salvaste la paleta!</div><button class="btn" id="nx">Siguiente palabra ➡️</button>';}
+    else if(lost){h+='<div class="msg">🫠 ¡Uy! La paleta se derritió. ¡Inténtalo otra vez!</div><button class="btn" id="rt">Intentar otra vez 🔄</button>';}
+    else{h+='<div class="kb">'+'abcdefghijklmnopqrstuvwxyz'.split('').map(function(c){var u=g.hasOwnProperty(c);return '<button data-c="'+c+'"'+(u?' disabled class="'+(g[c]?'g':'b')+'"':'')+'>'+c.toUpperCase()+'</button>';}).join('')+'</div>';}
+    app.innerHTML=h+'</div>';
+    var pp=document.getElementById('pp'),pd=document.getElementById('pd'),nb=bad;
+    requestAnimationFrame(function(){requestAnimationFrame(function(){if(pp)pp.style.height=(150-nb*22)+'px';if(pd)pd.style.width=(20+nb*28)+'px';});});
+    pb=bad;
+    if(won){addStar(2);confetti();sfx.win();setTimeout(function(){say(word);},900);document.getElementById('nx').onclick=function(){sfx.click();start(false);};}
+    if(lost){sfx.lose();document.getElementById('rt').onclick=function(){sfx.click();start(true);};}
+    [].forEach.call(app.querySelectorAll('.kb button'),function(b){b.onclick=function(){var c=b.dataset.c;var ok=word.indexOf(c)>=0;g[c]=ok;if(ok)sfx.good();else{bad++;sfx.drip();}draw();};});
+  }
+  start(false);
+}
+
+/* ---------- JUEGO DE OPCIONES (quiz / escucha / verdadero-falso) ---------- */
+function choice(title,how,total,build){
+  var n=0,good=0;
+  function next(){
+    if(n>=total){sfx.win();
+      confetti(60);
+      app.innerHTML='<div class="card"><h2>🏆 ¡Terminaste!</h2><div class="big">🎉</div><p style="font-size:22px">Acertaste a la primera <b>'+good+'</b> de <b>'+total+'</b>. ¡Eres un campeón!</p><button class="btn" id="ag">Jugar otra vez 🔄</button></div>';
+      document.getElementById('ag').onclick=function(){sfx.click();n=0;good=0;next();};return;
+    }
+    n++;var q=build(),first=true,done=false;
+    app.innerHTML='<div class="card"><h2>'+title+'</h2><div class="how">'+how+'</div><div class="prog">Pregunta '+n+' de '+total+'</div>'+q.head+'<div class="opts" id="os"></div><div class="msg" id="mg"></div></div>';
+    var sb=document.getElementById('snd');if(sb)sb.onclick=function(){sfx.click();say(q.say);};
+    var os=document.getElementById('os'),mg=document.getElementById('mg');
+    q.opts.forEach(function(o){
+      var b=document.createElement('button');b.className='opt';b.innerHTML=o.label;
+      b.onclick=function(){
+        if(done)return;
+        if(o.ok){done=true;sfx.ok();b.classList.add('ok');mg.textContent='🌟 ¡Correcto!';addStar(first?2:1);if(first)good++;confetti(14);setTimeout(next,1100);}
+        else{first=false;sfx.no();b.classList.add('no');mg.textContent='💪 ¡Casi! Inténtalo otra vez.';}
+      };
+      os.appendChild(b);
+    });
+    if(q.auto)setTimeout(function(){say(q.say);},300);
+  }
+  next();
+}
+function quiz(){
+  choice('🧠 Quiz de transportes','Mira el dibujo y toca la palabra correcta en inglés. 🔊 Puedes escucharla con el botón.',6,function(){
+    var it=pick(W),o=shuffle([it].concat(others(it,3))).map(function(x){return {label:x.w,ok:x===it};});
+    return {head:'<div class="big">'+it.e+'</div><div style="font-size:20px">¿Cómo se dice este transporte en inglés?</div>',opts:o};
+  });
+}
+function listen(){
+  choice('👂 ¿Qué escuchas?','Toca el botón 🔊 para escuchar una palabra en inglés. Luego toca el dibujo que corresponde. ¡Puedes escuchar las veces que quieras!',6,function(){
+    var it=pick(W),o=shuffle([it].concat(others(it,3))).map(function(x){return {label:'<span class="em">'+x.e+'</span>',ok:x===it};});
+    return {head:'<button class="btn" id="snd" style="background:var(--org);box-shadow:0 5px 0 #c77700;font-size:28px">🔊 Escuchar</button>',opts:o,say:it.w};
+  });
+}
+function tf(){
+  choice('✅ ¿Verdadero o falso?','Mira el dibujo y lee la palabra en inglés. Si la palabra es la correcta, toca Verdadero. Si no, toca Falso. 🔊 Puedes escucharla.',8,function(){
+    var it=pick(W),t=Math.random()<0.5,sh=t?it:others(it,1)[0];
+    return {head:'<div class="big">'+it.e+'</div><div style="font-size:22px">En inglés se dice: <b style="color:var(--pink);font-size:30px">'+sh.w+'</b></div><button class="btn" id="snd" style="background:var(--blu);box-shadow:0 5px 0 #2f6fce">🔊 Escuchar</button>',opts:[{label:'👍 Verdadero',ok:t},{label:'👎 Falso',ok:!t}],say:sh.w};
+  });
+}
+
+/* ---------- MEMORIA SONORA ---------- */
+function memory(){
+  var items=shuffle(W).slice(0,6),cards=[],first=null,lock=false,moves=0,found=0;
+  items.forEach(function(x,i){cards.push({k:i,t:'e',x:x});cards.push({k:i,t:'w',x:x});});
+  cards=shuffle(cards);
+  app.innerHTML='<div class="card"><h2>🎴 Memoria sonora</h2><div class="how">Voltea dos cartas para encontrar la pareja: ¡el dibujo y su palabra en inglés! Cada carta suena al voltearla. 🔊</div><div class="mem" id="mb"></div><div class="msg" id="mg">Movimientos: 0</div></div>';
+  var mb=document.getElementById('mb'),mg=document.getElementById('mg');
+  cards.forEach(function(c){
+    var b=document.createElement('button');b.className='mc';b.textContent='❓';c.b=b;
+    b.onclick=function(){
+      if(lock||b.classList.contains('up')||b.classList.contains('done'))return;
+      sfx.flip();b.classList.add('up');b.innerHTML=c.t==='e'?'<span class="em">'+c.x.e+'</span>':c.x.w;say(c.x.w);
+      if(!first){first=c;return;}
+      moves++;mg.textContent='Movimientos: '+moves;
+      if(first.k===c.k&&first!==c){
+        var a=first;first=null;a.b.className='mc done';b.className='mc done';found++;addStar(1);setTimeout(sfx.ok,350);
+        if(found===6){confetti(60);setTimeout(sfx.win,700);mg.textContent='🏆 ¡Lo lograste en '+moves+' movimientos!';}
+      }else{
+        var a2=first;first=null;lock=true;setTimeout(sfx.no,700);
+        setTimeout(function(){[a2,c].forEach(function(z){z.b.className='mc';z.b.textContent='❓';});lock=false;},1100);
+      }
+    };
+    mb.appendChild(b);
+  });
+}
+
+/* ---------- MENÚ ---------- */
+var T=[['learn','📚 Aprende',learn],['melt','🍧 Paleta',melt],['quiz','🧠 Quiz',quiz],['listen','👂 Escucha',listen],['tf','✅ V o F',tf],['mem','🎴 Memoria',memory]];
+var nav=document.getElementById('nav');
+T.forEach(function(t,i){
+  var b=document.createElement('button');b.textContent=t[1];
+  b.onclick=function(){sfx.click();[].forEach.call(nav.children,function(x){x.classList.remove('on');});b.classList.add('on');window.scrollTo(0,0);t[2]();};
+  nav.appendChild(b);
+});
+nav.children[0].click();
+if(window.speechSynthesis){window.speechSynthesis.getVoices();}
+})();
+</script>
+</body>
+</html>
